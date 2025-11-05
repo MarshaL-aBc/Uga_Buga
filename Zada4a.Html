@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="Style.css">
+    <title>Задача</title>
+</head>
+
+<body>
+    <header>
+<pre><a href="#Vnizz">Вниз</a></pre>
+
+    <a href="https://www.cristianoronaldo.com/#cr7" target="_blank"><img
+            src="https://i.pinimg.com/736x/25/c8/82/25c88270a5ad16b7a6cc45b4c828b974.jpg"
+            alt="Офицальный сайт Кристиано Роналдо" title="Перейти на официальный сайт Криштиано Роналдо?" width="10%">
+    </a>
+  <h3 align="center">Паспорт</h3>
+    <nav class="menu">
+        <ul>
+            <li><a href="index.html">Главная</a></li>
+            <li><a href="Famili_CR.html">Семья</a></li> 
+            <li><a href="Messi.html">Главный конкурент - Месси</a></li>
+            <li><a href="#Награды"><img
+                        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT7SjRDnkuXWCgY3BvRoCDP1Esi-JMAdq0uHw&s"
+                        alt="Золотые мячи Кристиано Роналдо" title="Золотые мячи Кристиано Роналдо" width="3%"></a></li>
+            <li><a title="Перейти на другой ресурс?" target="_blank"
+                    href="https://ru.wikipedia.org/wiki/Криштиану_Роналду"> Статья в Википедии</a></li>
+            <li><a href="Pashport.html">Паспорт</a></li>
+            <li><a href="OBrat_forma.html">Вступить в ряды фанатов (Обратная форма)</a></li>
+             <li><a href="Zada4a.Html">Задача</a></li> 
+          <p name="formulation">Принадлежит ли целое С диапазону A-B? Если принадлежит - отправить все на сервер</p>
+    <form action="https://www.bing.com/search?" id="UserEnter" name="UserEnter" target="_blank">
+        <ul>
+           
+
+
+
+
+
+
+
+
+
+  <h2>Проверка прохождения коробки в дверь</h2>
+
+
+1001. Имеется коробка со сторонами: A * B * C. Определить, пройдёт ли она в дверь с размерами M × K.
+    <div>
+        <h3>Размеры коробки (A * B * C):</h3>
+       <pre>
+        A: <input type="number" id="A" value="10">
+        B: <input type="number" id="B" value="10">
+        C: <input type="number" id="C" value="10">
+    </div></pre>
+    <div>
+        <h3>Размеры двери (M * K):</h3>
+        <pre> 
+        M: <input type="number" id="M" value="15">
+        K: <input type="number" id="K" value="15">
+    </div></pre>
+    <br>
+    <button onclick="checkFit()">Проверить</button>
+
+    <p>Результат: <span id="result"></span></p>
+
+    <script>
+        function checkFit() {
+            const A = Number(document.getElementById("A").value);
+            const B = Number(document.getElementById("B").value);
+            const C = Number(document.getElementById("C").value);
+            const M = Number(document.getElementById("M").value);
+            const K = Number(document.getElementById("K").value);
+            const resultSpan = document.getElementById("result");
+            function canPass(side1, side2, door1, door2) {
+                return (side1 <= door1 && side2 <= door2) || (side1 <= door2 && side2 <= door1);
+            }
+            const passesThrough = 
+                canPass(A, B, M, K) || 
+                canPass(A, C, M, K) || 
+                canPass(B, C, M, K);           
+            if (passesThrough) {
+                resultSpan.textContent = "Коробка ПРОЙДЕТ в дверь.";
+                resultSpan.className = "result-pass";
+            } else {
+                resultSpan.textContent = "Коробка НЕ ПРОЙДЕТ в дверь.";
+                resultSpan.className = "result-fail";
+            }
+        }
+    </script>
+
+
+</body></html>
